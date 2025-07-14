@@ -147,3 +147,10 @@ INSERT INTO PF_images_objet (id_objet, nom_image) VALUES
 (38, 'mixeur-plongeant.png'),
 (39, 'peigne.jpg'),
 (40, 'plat-verre.jpg');
+
+
+
+create or replace view v_objet_emprunt as
+select o.nom_objet,e.date_emprunt,e.date_retour,o.id_objet from PF_objet as o 
+join PF_emprunt as e where o.id_objet=e.id_objet;
+

@@ -11,9 +11,9 @@
 (ok)        -vers login apres l'inscription
         
     creer page emprunt(acceuil)
-        -afficher liste d'objet
-        -date de retour si deja emprunte
-        -si non bouton emprunt
+(ok)        -afficher liste d'objet
+ (ok)       -date de retour si deja emprunte
+ (ok)       -si non bouton emprunt
         
     creer page filtre par categorie
     
