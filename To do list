@@ -1,0 +1,20 @@
+(ok)    -creer base de donnees
+    -inserer les donnees de test
+    
+    -creer page login
+        -traitement:
+            -erreur si pas encore enregistre dans la base
+            -si deja, redirection vers accueil
+    
+    -creer page inscription
+        -creer fonction qui insere les donnees dans la base
+        -vers login apres l'inscription
+        
+    creer page emprunt(acceuil)
+        -afficher liste d'objet
+        -date de retour si deja emprunte
+        -si non bouton emprunt
+        
+    creer page filtre par categorie
+    
+    
