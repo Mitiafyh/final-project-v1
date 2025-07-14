@@ -11,8 +11,8 @@ $ville=$_POST['ville'];
 $genre=$_POST['genre'];
 
 
-$sql="insert into Membres (Email,Motdepasse,Nom,Date_Naissance) values('%s','%s','%s','%s');";
-$resultat=sprintf($sql,$mail,$mdp,$nom,$dtn);
+$sql="INSERT INTO PF_membre (email,mdp,nom,date_de_naissance,ville,genre) VALUES('%s','%s','%s','%s','%s','%s');";
+$resultat=sprintf($sql,$mail,$mdp,$nom,$dtn,$ville,$genre);
 $hafa = mysqli_query(bdd(),$resultat);
 
 header('location: ../pages/login.php');
@@ -21,7 +21,7 @@ header('location: ../pages/login.php');
 $mail = $_POST['mail'];
 $mdp  = $_POST['mdp'];
 
-$sql = "select * from Membres where Email = '$mail' and Motdepasse = '$mdp';";
+$sql = "SELECT * FROM PF_membre WHERE email = '$mail' AND mdp = '$mdp';";
 
 
 $resultat = mysqli_query(bdd(), $sql);
@@ -32,9 +32,9 @@ if ($nb_ligne == 0) {
     header('Location: ../pages/login.php?erreur=1');
 } else {
     $ligne = mysqli_fetch_assoc($resultat); 
-    $_SESSION['nom'] = $ligne['Nom'];
-    $_SESSION['id'] = $ligne['idMembre'];
-    header('Location: ../pages/accueil.php');
+    $_SESSION['nom'] = $ligne['nom'];
+    $_SESSION['id'] = $ligne['id_membre'];
+    header('Location: ../pages/emprunt.php');
 }
  }
  

@@ -1,12 +1,10 @@
-create database projet_final_s2;
-use projet_final_s2;
 create table PF_membre(
     id_membre int primary key auto_increment,
     nom varchar(50),
     date_de_naissance Date,
     genre varchar(10),
     email varchar(50),
-    ville varchar(10),
+    ville varchar(50),
     mdp varchar(50),
     image_profil varchar(50)
 
@@ -84,10 +82,10 @@ INSERT INTO PF_objet (nom_objet, id_categorie, id_membre) VALUES
 ('Peigne', 1, 4),
 ('Plat en verre', 4, 4);
 INSERT INTO PF_membre (nom, date_de_naissance, genre, email, ville, mdp, image_profil) VALUES
-('Alice', '1998-03-12', 'F', 'alice@mail.com', 'Tananarive', 'mdp123', 'alice.png'),
-('Bob', '1995-07-22', 'M', 'bob@mail.com', 'Fianarantsoa', 'azerty', 'bob.jpg'),
-('Clara', '2000-11-02', 'F', 'clara@mail.com', 'Toamasina', '123456', 'clara.jpeg'),
-('David', '1993-05-19', 'M', 'david@mail.com', 'Majunga', 'passw0rd', 'david.png');
+('Alice', '1998-03-12', 'F', 'alice@gmail.com', 'Tananarive', 'mdp123', 'alice.png'),
+('Bob', '1995-07-22', 'M', 'bob@gmail.com', 'Fianarantsoa', 'azerty', 'bob.jpg'),
+('Clara', '2000-11-02', 'F', 'clara@gmail.com', 'Toamasina', '123456', 'clara.jpeg'),
+('David', '1993-05-19', 'M', 'david@gmail.com', 'Majunga', 'passw0rd', 'david.png');
 INSERT INTO PF_categorie_objet (nom_categorie) VALUES
 ('Esthétique'),
 ('Bricolage'),
